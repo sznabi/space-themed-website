@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="./stilus.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Főoldal</title>
+  <link rel="icon" type="image/x-icon" href="./kepek/ikon.png">
+</head>
+<body>
+<section class="top-nav">
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li><a href="./index.html">FŐOLDAL</a></li>
+      <li><a href="./naprendszer.html">NAPRENDSZER</a></li>
+	  <li><a href="./missziok.html">MISSZIÓK</a></li>
+	  <li><a href="./asztronauta.html">ASZTRONAUTÁK</a></li>
+	  <li><a href="./nasa.html">NASA</a></li>
+    </ul>
+</section>
+<div class="kepek">
+	<img src="./kepek/ur1.jpg" alt="Képek a világűrből">
+	<img src="./kepek/ur2.jpg" alt="Képek a világűrből">
+	<img src="./kepek/ur3.jpg" alt="Képek a világűrből">
+	<img src="./kepek/ur6.jpg" alt="Képek a világűrből">
+	<img src="./kepek/ur5.jpg" alt="Képek a világűrből">
+	<img src="./kepek/ur7.jpg" alt="Képek a világűrből">
+	<img src="./kepek/ur9.jpg" alt="Képek a világűrből">
+	<img src="./kepek/ur8.jpg" alt="Képek a világűrből">
+	<img src="./kepek/ur4.jpg" alt="Képek a világűrből">
+</div>
+<div class="idezet">
+	<br>
+	<em>
+	 "Kis lépés egy embernek, de hatalmas ugrás az emberiségnek."
+	<br> - <a href="./asztronauta.html" id="neil">Neil Armstrong</a>
+	</em>
+</div>
+
+<img src="./kepek/planets.png" alt="Naprendszer bolygói" class="naprendszerkep">
+
+<table id="csillagtabla">
+    <th>Csillagászati naptár <br> 2023. augusztus - 2023. december</th>
+  <tr>
+    <th>Dátum</th>
+    <th>Esemény</th>
+  </tr>
+  <tr>
+ <td><b>Augusztus</b></td>
+  <tr>
+    <td>2023. augusztus 1.</td>
+    <td>Telihold</td>
+  </tr>
+  <tr>
+    <td>2023. augusztus 15.</td>
+    <td>Újhold</td>
+  </tr>
+  <tr>
+    <td>2023. augusztus 30.</td>
+    <td>Este a Hold a Szaturnusz közelében látszik</td>
+  </tr>
+  <tr>
+    <td>2023. augusztus 31.</td>
+    <td>Telihold</td>
+  </tr>
+<td><b>Szeptember</b></td>
+  <tr>
+    <td>2023. szeptember 4.</td>
+    <td>Éjszaka a Hold a Jupiter közelében látszik.</td>
+  </tr>
+  <tr>
+    <td>2023. szeptember 15.</td>
+    <td>Újhold</td>
+  </tr>
+  <tr>
+    <td>2023. szeptember 23.</td>
+    <td>Őszi napéjegyenlőség</td>
+  </tr>
+  <tr>
+    <td>2023. szeptember 29.</td>
+    <td>Telihold</td>
+  </tr>
+<td><b>Október</b></td>
+  <tr>
+    <td>2023. október 1.</td>
+    <td>Éjszaka a Hold a Jupiter közelében látszik.</td>
+  </tr>
+  <tr>
+    <td>2023. október 14.</td>
+    <td>Újhold</td>
+  </tr>
+  <tr>
+    <td>2023. október 28.</td>
+    <td>Részleges holdfogyatkozás, hazánkból is megfigyelhető.</td>
+  </tr>
+  <tr>
+    <td>2023. október 28.</td>
+    <td>Telihold</td>
+  </tr>
+ <td><b>November</b></td>
+  <tr>
+    <td>2023. november 5.</td>
+    <td>Utolsó negyed, a Hold az éjszaka második felében látható</td>
+  </tr>
+  <tr>
+    <td>2023. november 13.</td>
+    <td>Újhold</td>
+  </tr>
+  <tr>
+    <td>2023. november 18.</td>
+    <td>Leonidák meteorzápor</td>
+  </tr>
+  <tr>
+    <td>2023. november 27.</td>
+    <td>Telihold</td>
+  </tr>
+<td><b>December</b></td>
+  <tr>
+    <td>2023. december 14.</td>
+    <td>Geminidák meteorzápor</td>
+  </tr>
+  <tr>
+    <td>2023. december 22.</td>
+    <td>Éjszaka a Hold a Jupiter közelében látszik</td>
+  </tr>
+  <tr>
+    <td>2023. december 22.</td>
+    <td>Ursidák meteorzápor</td>
+  </tr>
+  <tr>
+    <td>2023. december 27.</td>
+    <td>Telihold</td>
+  </tr>
+</table>
+<button onclick="topFunction()" id="gomb" title="Vissza a tetejére">Vissza a tetejére
+<img src="./kepek/arrow.png" class="arrow">
+</button>
+<script>
+// Get the button
+let mybutton = document.getElementById("gomb");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,630 @@
+/* A főoldal CSS része */
+.naprendszerkep {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  max-width:100%;
+  height:auto;
+}
+div.kepek{
+  background-color: #1b262c;
+  overflow: auto;
+  white-space: nowrap;
+  max-width:100%;
+  height:auto;
+}
+div.kepek img {
+  padding: 5px;
+  width: 20%;
+}
+#csillagtabla {
+  width: 78%;
+  margin: 0px 50px;
+  color: #1b262c;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+}
+#csillagtabla th {
+  height: 50px;
+  width: 25px;
+  vertical-align: center;
+  text-align: center;
+  background-color: #1b262c;
+  color: #e8f4fc;
+  border-radius: 7px;
+}
+#csillagtabla tr, td {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid #1b262c;
+  border-radius: 5px;
+}
+#csillagtabla tr:hover {
+  background-color: #1b262c;
+  color:#dbeefb;
+  transition-duration: 0.3s;
+}
+.idezet{
+  font-size: 20px;
+  text-align:center;
+  margin: 40px 0 40px;
+  color: #1b262c;
+}
+#neil {
+	text-decoration: none;
+	color: #1b262c;
+}
+#neil:hover {
+  text-shadow: 0px 0px 6px #9fa7ad;
+}
+
+@media screen and (max-width: 800px) {
+div.kepek img {
+  margin-top:52px;
+  width: 36%;
+}
+.naprendszerkep {
+   width: 92%;
+}
+}
+
+@media screen and (min-width: 800px) {
+div.kepek img {
+  margin-top:52px;
+  width: 30%;
+}
+.idezet{
+  font-size: 24px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+div.kepek img {
+  margin-top:52px;
+  width: 20%;
+}
+.idezet{
+  font-size: 30px;
+}
+}
+
+/* A navigációs menü CSS része */
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131b20;
+  color: #e8f4fc;
+  height: 50px;
+  padding: 1em;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index:9999;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li a {
+  color: #e8f4fc;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size:15px;
+  display:block;
+  font-weight: bolder;
+}
+.menu li a:hover {
+  text-shadow: 0px 0px 3px #9fa7ad;
+  border-bottom: 1px solid #9fa7ad;
+}
+.menu li {
+  margin: 1em;
+  overflow: hidden;
+}
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#menu-toggle {
+  display: none;
+}
+.menu-button, .menu-button::before, .menu-button::after {
+  display: block;
+  background-color: #e8f4fc;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 1050px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    height: 1.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    background-color: #131b20;
+  }
+  .menu li a {
+	color: #e8f4fc;
+	margin-top: 3px;
+  }
+  .menu li a:hover {
+	text-shadow: 0px 0px 6px #9fa7ad;
+	border-bottom: 1px solid #e8f4fc;
+}
+}
+
+/* A naprendszer oldal CSS része */
+
+#bolygok {
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('./kepek/background.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+.naprendszer {
+  margin-top: 95px;
+  margin-left:5.5%;
+}
+.bolygok {
+  position: relative;
+  width: 300px;
+  margin-top:50px;
+  margin-right:1%;
+  margin-left:1%;
+  float: left;
+  margin-bottom: 25px;
+}
+.atfedes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 304px;
+  width: 304px;
+  opacity: 0;
+  transition: .5s ease;
+  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  background-size: cover;
+  border-radius: 400px;
+}
+.bolygok:hover .atfedes {
+  opacity: 0.82;
+  cursor: pointer;
+  transform: scale(1.025);
+}
+.text {
+  color: #e8f4fc;
+  font-size: 15px;
+  position: absolute;
+  top: 45%;
+  left: 42%;
+  transform: translate(-45%, -45%);
+  text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+.naprendszer {
+  margin-left: 20%;
+  margin-top: 80px;
+}
+}
+
+/* A missziók oldal CSS része */
+
+.kepekestabla {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.bal img, .jobb img {
+  width: 500px;
+}
+.kepekestabla img {
+  max-width: 75%;
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 25px;
+}
+#missiontabla {
+  width: 78%;
+  color: #1b262c;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+#missiontabla th {
+  height: 40px;
+  width: 25px;
+  vertical-align: center;
+  text-align: center;
+  background-color: #1b262c;
+  color: #e8f4fc;
+  border-radius: 7px;
+}
+#missiontabla tr, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #1b262c;
+  border-radius: 5px;
+}
+#missiontabla tr:hover {
+  background-color: #1b262c;
+  color:#dbeefb;
+  transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+#missiontabla {
+  width: 375%;
+  margin: auto;
+  margin-top: 70px;
+ }
+ .kepekestabla img {
+  visibility: collapse;
+}
+}
+
+/* Az asztronauta oldal CSS része */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-top:100px;
+}
+.emberkep{
+	text-align: center;
+	width:auto;
+	height: auto;
+    position: relative;
+	flex: 100%;
+}
+.emberkep img{
+	width:400px;
+	display:block;
+	margin: 2% auto;
+	border-radius: 75px;
+	border: 6px solid #1b262c;
+    opacity: 0.92;
+}
+.embernev {
+	margin: auto;
+	width:160px;
+	cursor: pointer;
+	color: #131b20;
+	text-align: center;
+    border-radius: 25px;
+    background: #1b262c;
+    padding: 8px;
+    color: #dbeefb;
+    opacity: 0.92;
+	font-weight:bolder;
+    font-size: 17px;
+	display:block;
+	border: 3px solid #dbeefb;
+	text-shadow: 0px 0px 5px #61899e;
+}
+.emberszoveg {
+    text-align: center;
+    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+	opacity: 0;
+    font-size: 16px;
+    border-radius: 25px;
+    background: #1b262c;
+    padding: 33px;
+    color: #dbeefb;
+	width:500px;
+	margin: 15px 10px 15px 10px;
+	display:block;
+}
+.embernev:hover {
+	transform: scale(1.008);
+	transition: all 0.25s ease-in;
+	text-shadow: 0px 0px 5px #61899e;
+	background: #dbeefb;
+	font-weight:bolder;
+	color: #1b262c;
+	border: 3px solid #1b262c;
+}
+.embernev:hover+.emberszoveg {
+    opacity: 0.90;
+}
+.row3{
+    display: none;
+    align-items: center;
+    justify-content: center;
+	margin-top:100px;
+}
+.row2{
+    display: none;
+    align-items: center;
+    justify-content: center;
+	margin-top:100px;
+}
+@media screen and (min-width: 0px) {
+  .row2, .row {
+    display:none;
+  }
+  .row3 {
+    display:flex;
+    flex-direction: column;
+  }
+.row3 img{
+	width:418px;
+  }
+  .emberszoveg {
+    font-size: 16px;
+    padding: 30px;
+	width:445px;
+}
+}
+@media screen and (min-width: 1050px) {
+  .row2 {
+    display:flex;
+  }
+  .row2 img{
+	width:450px;
+  }
+  .row3, .row {
+    display:none;
+  }
+  .emberszoveg {
+    font-size: 16px;
+    padding: 20px;
+	width:490px;
+}
+}
+
+@media screen and (min-width: 1600px) {
+  .row3, .row2{
+    display:none;
+  }
+  .row {
+    display:flex;
+  }
+}
+
+/* NASA CSS része */
+
+.logo {
+	width: 100%;
+	height: 445px;
+	background:#1b262c;
+    text-align: center;
+}
+.logo img{
+  margin-top:105px;
+}
+.nasatarolo {
+    width: 75%;
+    margin: 0 auto;
+}
+#roviden{
+	margin-top:45px;
+}
+#roviden, #galeria, #urprogramok, #jovo {
+    padding: 13px 0;
+	color:#1b262c;
+}
+#urprogramok p, #jovo p{
+	width: 94.8%;
+}
+#urprogramok ul li, #jovo ul li{
+	list-style-type: none;
+	font-weight:bold;
+}
+#urprogramok ul li a{
+	text-decoration: none;
+	color:#1b262c;
+}
+#urprogramok ul li a:hover{
+	text-shadow:0px 0px 5px #6a747c;
+}
+#urprogramok p, #jovo p{
+	padding: 15px 20px;
+	background: #27373f;
+	color: #dbeefb;
+	border-radius: 25px;
+	font-size:15px;
+}
+.nasakepek {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin-left:22px;
+  justify-content: center;
+  align-items: center;
+}
+.nasakep {
+  padding:15px;
+}
+.nasakep img {
+  border: 5px solid #27373f;
+  border-radius: 25px;
+}
+.slideshow-tarolo {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #dbeefb;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  border-radius: 15px;
+}
+.next {
+  right: 0;
+}
+.prev:hover, .next:hover {
+  background-color: #dbeefb;
+  color:#1b262c;
+  border-radius: 30px;
+  opacity: 0.8;
+}
+.szamozas {
+  color: #dbeefb;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #577c8e;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.aktiv, .dot:hover {
+  background-color: #1b262c;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media screen and (max-width: 1000px) {
+  .nasakepek {
+    flex-direction: column;
+  }
+  .nasakep img {
+    width: 375px;
+  }
+}
+
+/* Közös CSS rész */
+
+body {
+	background-color: #dbeefb;
+    font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;	
+	margin-bottom: 70px; 
+}
+#gomb {
+	display: none;
+	position: fixed;
+	bottom: 15px;
+	right: 25px; 
+	z-index: 999;
+	border: none;
+	outline: none; 
+	background-color: #1b262c;
+	color: #e8f4fc;
+	cursor: pointer;
+	padding: 13px;
+	border-radius: 16px;
+	font-size: 15px;
+	text-align: center;
+	font-weight:bolder;
+}
+#gomb:hover {
+    background-color: #27373f;
+	color: #e8f4fc;
+    text-shadow: 0px 0px 5px #9fa7ad;
+	transition-duration: 0.2s;
+}
+#gomb1 {
+	display: none;
+	position: fixed;
+	bottom: 15px;
+	right: 25px;
+	z-index: 999;
+	border: none;
+	outline: none;
+	background-color: #9fa7ad;
+	color: #1b262c;
+	cursor: pointer;
+	padding: 13px;
+	border-radius: 16px;
+	font-size: 15px;
+	text-align: center;
+	font-weight:bolder;
+}
+#gomb1:hover {
+    background-color: #e8f4fc;
+	color: #27373f;
+    text-shadow: 0px 0px 5px #9fa7ad;
+	transition-duration: 0.2s;
+}
+.arrow, .arrow1{
+	margin-left: 5px;
+	width:14px;
+}
