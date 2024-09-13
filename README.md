@@ -24,3 +24,10 @@
   <li><strong>ASTRONAUTS:</strong> A showcase of notable astronauts and their achievements.</li>
   <li><strong>NASA:</strong> Information about NASA’s history, mission, and contributions.</li>
 </ol>
+
+## 🚀 Technologies
+<ol>
+  <li><strong>HTML5</li>
+  <li><strong>CSS3</li>
+</ol>
+
