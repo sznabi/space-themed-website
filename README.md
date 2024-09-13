@@ -26,8 +26,8 @@
 </ol>
 
 ## 🚀 Technologies
-<ol>
+<ul>
   <li><strong>HTML5</li>
   <li><strong>CSS3</li>
-</ol>
+</ul>
 
